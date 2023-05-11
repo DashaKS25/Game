@@ -1,9 +1,3 @@
-def display_word(w, guessing):  # changing names, because word and guessed are global variables
-    for letter in w:
-        print(letter if letter in guessing else '_', end=' ')  # make print shorter
-    print()
-
-
 def is_word_guessed(w, guessing):  # changing names, because word and guessed are global variables
     for letter in w:
         if letter not in guessing:
@@ -27,7 +21,7 @@ while True:
                 print('You already asked this letter!')
             elif guess in word:
                 guessed.append(guess)
-                print(''.join(guessed))
+                print('Hidden word contain this letter! Keep it going!')
                 if is_word_guessed(word, guessed):
                     print(f'You won! Word was "{word}".')
                     score += 1
