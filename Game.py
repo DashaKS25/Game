@@ -6,7 +6,7 @@ def is_word_guessed(w, guessing):  # changing names, because word and guessed ar
 
 
 import random
-words = ['python', 'programming', 'language', 'computer', 'disk', 'dock', 'data', ]
+words = ['python', 'programming', 'language', 'computer', 'disk', 'dock', 'data']
 score = 0
 while True:
     choice = input('You want to guess word? (y/n): ')
@@ -33,5 +33,5 @@ while True:
             print(f'You lost. Word was "{word}".')
         words.remove(word)
     else:
-        print(f'Thank for playing, your score: {score}.')
+        print(f'Thank for playing, your score: "{score}".')
         break
