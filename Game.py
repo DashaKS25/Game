@@ -21,12 +21,12 @@ def is_word_guessed(word, guessed):
 
 while max_attempts > 0:
     print(f'У вас {max_attempts} попыток.')
-    display_word(word, guessed)
     guess = input('Введите букву: ').lower()
     if guess in guessed:
         print('Вы уже угадали эту букву!')
     elif guess in word:
         guessed.append(guess)
+        print("".join(guessed))
         if is_word_guessed(word, guessed):
             print(f'Вы победили! Загаданное слово было "{word}".')
             break
